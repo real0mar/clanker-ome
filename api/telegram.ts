@@ -538,21 +538,6 @@ async function callTelegramApi<T extends Record<string, unknown>>(method: string
   return response.json();
 }
 
-function formatSenderName(user?: TelegramUser): string {
-  if (!user) {
-    return 'Someone';
-  }
-
-  if (user.username) {
-    return user.username.startsWith('@') ? user.username : `@${user.username}`;
-  }
-
-  const firstName = user.first_name ?? '';
-  const lastName = user.last_name ?? '';
-  const fullName = `${firstName} ${lastName}`.trim();
-  return fullName || 'Someone';
-}
-
 function formatCaption(metadata: SpotifyMetadata, announcer: string): string {
   const who = announcer || 'Someone';
   switch (metadata.type) {
@@ -573,5 +558,38 @@ function formatCaption(metadata: SpotifyMetadata, announcer: string): string {
     }
     default:
       return `${who} wants you to open ${metadata.title}!`;
+  }
+}
+
+function formatSenderName(user?: TelegramUser): string {
+  if (!user) {
+    return 'Someone';
+  }
+
+  const easterEggName = specialNameForUserId(user.id);
+  if (easterEggName) {
+    return easterEggName;
+  }
+
+  if (user.username) {
+    return user.username.startsWith('@') ? user.username : `@${user.username}`;
+  }
+
+  const firstName = user.first_name ?? '';
+  const lastName = user.last_name ?? '';
+  const fullName = `${firstName} ${lastName}`.trim();
+  return fullName || 'Someone';
+}
+
+function specialNameForUserId(id?: number): string | undefined {
+  switch (id) {
+    case 6885977226:
+      return 'ome';
+    case 721797809:
+      return 'SpicyBoi';
+    case 131958998:
+      return 'Frat putput';
+    default:
+      return undefined;
   }
 }
