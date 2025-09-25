@@ -1,28 +1,28 @@
 {
-    "name": "clanker-ome",
-    "version": "1.0.0",
-    "description": "Telegram bot that expands Spotify links with artwork and metadata",
-    "main": "index.js",
-    "scripts": {
-        "vercel-build": "tsc",
-        "build": "tsc",
-        "test": "echo \"No automated tests configured\""
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/real0mar/clanker-ome.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "type": "commonjs",
-    "bugs": {
-        "url": "https://github.com/real0mar/clanker-ome/issues"
-    },
-    "homepage": "https://github.com/real0mar/clanker-ome#readme",
-    "devDependencies": {
-        "@types/node": "^24.5.2",
-        "@vercel/node": "^5.3.24",
-        "typescript": "^5.9.2"
-    }
+	"name": "clanker-ome",
+	"version": "1.0.0",
+	"description": "Telegram bot that expands Spotify links with artwork and metadata",
+	"main": "index.js",
+	"scripts": {
+		"vercel-build": "tsc",
+		"build": "tsc",
+		"test": "echo \"No automated tests configured\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/real0mar/clanker-ome.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "commonjs",
+	"bugs": {
+		"url": "https://github.com/real0mar/clanker-ome/issues"
+	},
+	"homepage": "https://github.com/real0mar/clanker-ome#readme",
+	"devDependencies": {
+		"@types/node": "^24.5.2",
+		"@vercel/node": "^5.3.24",
+		"typescript": "^5.9.2"
+	}
 }
